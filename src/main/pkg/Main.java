@@ -25,6 +25,7 @@ import gui.swing.RunAwayButton;
 import singleton.kasyno.BlackJackPlayer;
 import singleton.kasyno.Casino;
 import singleton.kasyno.OneHandBanditPlayer;
+import threads.ZipBomb;
 
 public class Main {
 
@@ -117,11 +118,15 @@ public class Main {
 		
 		new TextAnalyzer();
 		
-		*/
-		
 		//KSIAZKA ADRESOWA
 		
 		new AdressBook();
+		
+		*/
+		
+		//ZIP BOMBA
+		
+		new ZipBomb();
 		
 	}
 
