@@ -21,7 +21,7 @@ public class ZipBomb extends JFrame implements WindowListener, ActionListener {
 		
 		//basic parameters
 		super("ZipBomb");
-		setBounds(100,100,130,130);
+		setBounds(100,100,230,130);
 		setLayout(null);
 		
 		//listener
@@ -29,14 +29,14 @@ public class ZipBomb extends JFrame implements WindowListener, ActionListener {
 		
 		//button declaration
 		JButton button = new JButton("Start");
-		button.setBounds(10, 50, 100, 30);
+		button.setBounds(60, 50, 100, 30);
 		button.addActionListener(this);
 		button.setActionCommand("start");
 		add(button);
 		
 		//text field declaration
 		text = new JTextField();
-		text.setBounds(10, 10, 100, 30);
+		text.setBounds(60, 10, 100, 30);
 		add(text);
 		
 		setVisible(true);

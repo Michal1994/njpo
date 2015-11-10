@@ -25,6 +25,7 @@ import gui.swing.RunAwayButton;
 import singleton.kasyno.BlackJackPlayer;
 import singleton.kasyno.Casino;
 import singleton.kasyno.OneHandBanditPlayer;
+import threads.FactorialWindow;
 import threads.ZipBomb;
 
 public class Main {
@@ -122,11 +123,15 @@ public class Main {
 		
 		new AdressBook();
 		
-		*/
-		
 		//ZIP BOMBA
 		
 		new ZipBomb();
+		
+		*/
+		
+		//SILNIA
+		
+		new FactorialWindow();
 		
 	}
 
