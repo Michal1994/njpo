@@ -21,7 +21,7 @@ public class CollectionSpeedTesterFrame extends JFrame implements WindowListener
 	public CollectionSpeedTesterFrame(){
 		
 		//basic parameters
-		super("Hello!");
+		super("Speed Tester!");
 		setBounds(100,100,600,500);
 		setLayout(null);
 		

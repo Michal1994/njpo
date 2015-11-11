@@ -1,6 +1,8 @@
 package decorator.game;
 
+import java.io.IOException;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class GameBoard {
 	
@@ -35,7 +37,10 @@ public class GameBoard {
 	}
 	
 	public void stepWork(){
-		
+		Scanner s = new Scanner(System.in);
+		while(work()){
+			s.next();
+		}
 	}
 	
 	public void normalWork(){

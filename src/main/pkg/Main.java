@@ -87,7 +87,7 @@ public class Main {
 		
 		//DEKORATOR GRA
 		GameBoard.getInstance().normalWork();
-		
+		GameBoard.getInstance().stepWork();
 		
 		
 		//GUI POWITANIE
@@ -130,8 +130,8 @@ public class Main {
 		*/
 		
 		//SILNIA
-		
-		new FactorialWindow();
+
+		//new FactorialWindow();
 		
 	}
 
