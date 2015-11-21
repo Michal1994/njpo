@@ -17,6 +17,8 @@ public class FactorialWindow extends JFrame implements WindowListener, ActionLis
 	private JTextField startelements;
 	private JTextField repeats;
 	
+	private Thread[] t;
+	
 	public FactorialWindow() {
 		
 		//basic parameters
@@ -46,8 +48,14 @@ public class FactorialWindow extends JFrame implements WindowListener, ActionLis
 		
 		//button declaration
 		JButton button = new JButton("Start test");
-		button.setBounds(10, 50, 560, 30);
+		button.setBounds(10, 50, 275, 30);
 		button.setActionCommand("start");
+		button.addActionListener(this);
+		add(button);
+		
+		button = new JButton("Interrupt");
+		button.setBounds(295, 50, 275, 30);
+		button.setActionCommand("interrupt");
 		button.addActionListener(this);
 		add(button);
 		
@@ -72,7 +80,7 @@ public class FactorialWindow extends JFrame implements WindowListener, ActionLis
 				return;
 			}
 			
-			Thread[] t = new Thread[2];
+			t = new Thread[2];
 			
 			FactorialIterationRunnable itr = new FactorialIterationRunnable();
 			itr.setValue(val, rep);
@@ -91,6 +99,20 @@ public class FactorialWindow extends JFrame implements WindowListener, ActionLis
 			text.setText("");
 			
 		}
+		else if(e.getActionCommand().equals("interrupt")){
+			t[0].interrupt();
+			t[1].interrupt();
+			
+			try {
+				Thread.sleep(200);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			
+			if(!t[0].isAlive() && !t[1].isAlive()) text.append("\nInterrupted");
+		}
+		
 	}
 
 	@Override

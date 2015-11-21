@@ -35,8 +35,14 @@ public class FactorialIterationRunnable implements Runnable {
 			
 			result = 1;
 			
-			for(long j = val; j > 1; j--)
+			for(long j = val; j > 1; j--){
+				try {
+					Thread.sleep(0);
+				} catch (InterruptedException e) {
+					return;
+				}
 				result *= j;
+			}
 			
 			time = System.nanoTime() - time;
 			

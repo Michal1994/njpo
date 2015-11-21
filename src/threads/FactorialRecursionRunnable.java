@@ -33,7 +33,11 @@ public class FactorialRecursionRunnable implements Runnable {
 		
 			long time = System.nanoTime();
 			
-			result = recursionCalculate(val);
+			try {
+				result = recursionCalculate(val);
+			} catch (InterruptedException e) {
+				return;
+			}
 			
 			time = System.nanoTime() - time;
 			
@@ -48,9 +52,11 @@ public class FactorialRecursionRunnable implements Runnable {
 		
 	}
 	
-	private long recursionCalculate(int i){
+	private long recursionCalculate(int i) throws InterruptedException{
 		
 		if(i <= 1 ) return 1;
+		
+		Thread.sleep(0);
 		
 		return i * recursionCalculate(i-1);
 		
