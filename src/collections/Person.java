@@ -43,11 +43,11 @@ public class Person implements Comparable<Person>, Serializable {
 	@Override
 	public int compareTo(Person arg0) {
 		
-		int cmp = surname.compareTo(arg0.surname);
+		int cmp = surname.toUpperCase().compareTo(arg0.surname.toUpperCase());
 		if(cmp == 0)
-			cmp = name.compareTo(arg0.name);
+			cmp = name.toUpperCase().compareTo(arg0.name.toUpperCase());
 		
-		return 0;
+		return cmp;
 		
 	}
 	

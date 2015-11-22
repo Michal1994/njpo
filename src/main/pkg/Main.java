@@ -15,6 +15,7 @@ import collections.AdressBook;
 import collections.CollectionSpeedTester;
 import collections.CollectionSpeedTesterFrame;
 import collections.TextAnalyzer;
+import databases.AdressBookDB;
 import databases.DBConnector;
 import decorator.LineCounterStream;
 import decorator.WordCounterStream;
@@ -133,9 +134,9 @@ public class Main {
 		
 		
 		//SILNIA
-		*/
+		
 		new FactorialWindow();
-		/*
+		
 		//BAZA SINGLETON
 		
 		DBConnector.getInstance().connect("org.sqlite.JDBC", "jdbc:sqlite:baza.db");
@@ -159,7 +160,8 @@ public class Main {
 		
 		*/
 		
-		
+		//KSIAZKA TELEFONICZNA Z BAZA DANYCH
+		new AdressBookDB();
 		
 	}
 
