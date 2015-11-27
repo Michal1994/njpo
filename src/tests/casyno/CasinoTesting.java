@@ -1,6 +1,6 @@
-package singleton.kasyno;
+package tests.casyno;
 
-public class Casino {
+public class CasinoTesting {
 	
 	public static final int BLACKJACKLOSE = 12;
 	public static final int BLACKJACKWIN = 1300;
@@ -10,11 +10,11 @@ public class Casino {
 	public static final double BLACKJACKWINCHANCE = 0.3;
 	public static final double ONEHANDBANDITCHANCE = 0.2;
 	
-	private static Casino instance;
+	private static CasinoTesting instance;
 	
 	private int money;
 	
-	private Casino(){
+	private CasinoTesting(){
 		money = 100000;
 	}
 	
@@ -46,8 +46,8 @@ public class Casino {
 		return ONEHANDBANDITWIN;
 	}
 	
-	public static Casino getInstance(){
-		if(instance == null) instance = new Casino();
+	public static CasinoTesting getInstance(){
+		if(instance == null) instance = new CasinoTesting();
 		return instance;
 	}
 	

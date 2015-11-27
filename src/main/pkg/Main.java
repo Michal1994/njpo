@@ -17,6 +17,7 @@ import collections.CollectionSpeedTesterFrame;
 import collections.TextAnalyzer;
 import databases.AdressBookDB;
 import databases.DBConnector;
+import databases.DatabaseSpeedTesterFrame;
 import decorator.LineCounterStream;
 import decorator.WordCounterStream;
 import decorator.game.GameBoard;
@@ -158,10 +159,13 @@ public class Main {
 			e.printStackTrace();
 		}
 		
-		*/
-		
 		//KSIAZKA TELEFONICZNA Z BAZA DANYCH
 		new AdressBookDB();
+		
+		*/
+		
+		//TESTER PREDKOSCI BAZY
+		new DatabaseSpeedTesterFrame();
 		
 	}
 
