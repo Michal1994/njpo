@@ -11,6 +11,8 @@ import java.sql.SQLException;
 
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 
+import profiling.AdressBookDBProfiling;
+import profiling.ZipBombProfiling;
 import collections.AdressBook;
 import collections.CollectionSpeedTester;
 import collections.CollectionSpeedTesterFrame;
@@ -162,10 +164,16 @@ public class Main {
 		//KSIAZKA TELEFONICZNA Z BAZA DANYCH
 		new AdressBookDB();
 		
-		*/
-		
 		//TESTER PREDKOSCI BAZY
 		new DatabaseSpeedTesterFrame();
+		
+		//PROFILOWANIE KSIAZKI ADRESOWEJ
+		new AdressBookDBProfiling();
+		
+		*/
+		
+		//PROFILOANIE ZIP BOMBY
+		new ZipBombProfiling();
 		
 	}
 
